@@ -72,6 +72,10 @@ a{
 	text-align: center;
 }
 
+.snaps-container {
+	text-align: center;
+}
+
 #anim {
 	background-repeat: no-repeat !important;
 	background-size: 21% !important;
@@ -123,4 +127,10 @@ a{
 	background-size: 32% !important;
     background-repeat: no-repeat !important;
     background-position: right -170% !important;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#multiplication {
+    	background-position: right 65% !important;
+	}
 }
