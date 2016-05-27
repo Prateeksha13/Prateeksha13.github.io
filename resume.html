@@ -10,13 +10,26 @@
 		#resume-container {
 			height: 700px;
 		}
+		#download {
+			display: none;
+		}
+		@media only screen and (max-device-width: 480px) {
+			#download {
+				display: block;
+				color: #fff !important;
+				font-size: 18px;
+			}
+			#download a {
+				color: #fff !important;
+			}
+		}
 	</style>
 </head>
 <body>
 	<div id="resume-container">
 		<embed width="100%" height="100%" src="Prateeksha-Resume.pdf">
-			<noembed><a href="Prateeksha-Resume.pdf" download>Click to Download</a></noembed>
 		</embed>
+		<div id="download"><a href="Prateeksha-Resume.pdf" download>Click to Download</a></div>
 	</div>
 </body>
 </html>
