@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="resources/static/js/jquery.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="resources/static/css/bootstrap.min.css">
+	<script type="text/javascript" src="resources/static/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/static/css/style.css">
+</head>
+<body style="background: url('resources/static/images/blue1.jpg');">
+	<div id="bg">
+		<div id="container">
+			<ul id="scene">	
+				<li id="layer1" data-depth="0.3" class="layer"><img src="resources/static/images/layer1-blue.png"></li>
+				<li id="layer2" data-depth="0.5" class="layer"><img src="resources/static/images/layer2-blue.png"></li>
+				<li id="layer3" data-depth="1.0" class="layer"><img src="resources/static/images/layer3-blue.png"></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div id="black_bg"></div>
+		<div id="heading" class="align"><a id="heading_link" href="//www.jnaapti.com" style="text-decoration:none">jnaapti</a></div>
+		<div id="tag" class="align">VIRTUAL COACH</div>
+		<div id="form" class="align">
+			<input class="input input-lg" id="email" placeholder="Email"></input>
+			<div id="pwd_div" class="align">
+				<span><input class="input input-lg" id="password" type="password" placeholder="Password"></input></span>
+				<span><button class="btn" id="show_pwd"><img src="resources/static/images/invisible-24.png" id="btn_icon"></button></span>
+			</div>
+		</div>
+		<div class="checkbox align">
+    		<label>
+      			<input type="checkbox" id="rememberMe_check"><span style="padding-left: 10px; font-weight: bold;">Remember me for 30 days</span> </input>
+    		</label>
+  		</div>
+		<div id="login_div" class="align"><button class="btn" id="login_btn">LOGIN</button></div>
+		<div id="forgot_pwd" class="align"><a>Forgot password?</a></div>
+	</div>
+	<script src="resources/static/plugins/parallax/js/parallax.min.js"></script>
+	<script type="text/javascript">
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+		$(document).ready(function () {
+			$("#show_pwd").click(function () {
+				if ($("#password").attr("type")=="password") {
+					$("#password").attr("type", "text");
+					$("#btn_icon").attr("src","resources/static/images/visible-24.png");
+					$("#show_pwd").attr("title","Hide Password");
+				}
+				else{
+					$("#password").attr("type", "password");
+					$("#btn_icon").attr("src","resources/static/images/invisible-24.png");
+					$("#show_pwd").prop("title","Show Password");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
